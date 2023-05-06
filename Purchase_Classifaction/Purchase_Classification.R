@@ -1,5 +1,5 @@
 
-#SVM CLASSIFICATION
+#-------------SVM CLASSIFIER-----------------
 
 dataset = read.csv('Social_Network_Ads.csv')
 dataset = dataset[3:5]
@@ -49,7 +49,7 @@ contour(X1, X2, matrix(as.numeric(y_grid), length(X1), length(X2)), add = TRUE)
 points(grid_set, pch = '.', col = ifelse(y_grid == 1, 'dodgerblue', 'salmon'))
 points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'dodgerblue3', 'salmon3'))
 
-#-----------------DECISION TREE CLASSIFIER------------------
+#-----------------DECISION TREE CLASSIFIER--------------
 library(rpart)
 classifier = rpart(formula = Purchased ~ .,
                    data = training_set)
